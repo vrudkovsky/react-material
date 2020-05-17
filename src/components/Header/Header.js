@@ -22,21 +22,33 @@ import MailIcon from "@material-ui/icons/Mail";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 
+import SvgIcon from '@material-ui/core/SvgIcon';
+import { green } from '@material-ui/core/colors';
+function HomeIcon(props) {
+    return (
+        <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+    );
+}
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 3,
+
     },
     menuButton: {
         marginRight: theme.spacing(2),
     },
     title: {
         flexGrow: 1,
+        fontFamily: 'montserrat, sans-serif',
     },
     font: {
-        fontSize: '10'
-    }
+        fontSize: '10',
+
+    },
 
 }));
 
@@ -128,11 +140,12 @@ export default function AppHeader() {
             >
 
                 <Toolbar>
+                    <HomeIcon style={{ color: green[500], fontSize: 40 }}/>
                     <Typography variant="h6" className={classes.title}>
-                        News1
+                        News 1
                     </Typography>
                     <Typography variant="h6" className={classes.title}>
-                        News2
+                        News 2
                     </Typography>
                     <Button color="inherit">Login</Button>
 
